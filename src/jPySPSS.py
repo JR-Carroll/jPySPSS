@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # Filename: SPSS_Jpack.py
-import pdb
 
 """Authored by J. R. Carroll, 2010 in response to an email written to the UGA
 Listserve:
@@ -19,7 +18,7 @@ TIA!
 Ruben van den Berg"
 """
 
-def spssToRange(vars):
+def spssToRange(varss):
     """Allows a set of variable names to be passed to it in the standard SPSS
     variable ranges format.  This function then identifies "to" ranges and
     builds a list of variables that expand/iterate between the start and end variables.
@@ -72,10 +71,10 @@ def spssToRange(vars):
         #print prependVarStart, prependVarEnd
 
         if prependVarStart != prependVarEnd:
-             varRTN = "** SPSS_JPack_ERROR:  Starting and Ending variable mismatch - check your syntax**"
-             return varRTN
+            varRTN = "** SPSS_JPack_ERROR:  Starting and Ending variable mismatch - check your syntax**"
+            return varRTN
         else:
-             pass
+            pass
 
 
         diffVar = int(endVarInt) - int(startVarInt)
